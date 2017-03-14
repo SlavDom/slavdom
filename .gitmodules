@@ -1,0 +1,6 @@
+[submodule "server"]
+	path = server
+	url = git://github.com/SlavDom/slavdom-server.git
+[submodule "client"]
+	path = client
+	url = git://github.com/SlavDom/slavdom-client.git

@@ -64,6 +64,6 @@
     ]
   },
   "scripts": {
-    "start": "nodemon --watch server --watch client/public/index.html --exec babel-node -- server/src/startServer.js"
+    "start": "nodemon --watch server --exec babel-node -- server/src/startServer.js"
   }
 }

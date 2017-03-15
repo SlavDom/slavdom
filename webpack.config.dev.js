@@ -4,9 +4,14 @@ import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
-  entry: path.join(__dirname, '/client/src/index.jsx'),
+  entry: [
+    'webpack-hot-middleware/client',
+    path.join(__dirname, '/client/src/index.jsx'),
+  ],
   output: {
-    path: '/'
+    path: path.join(__dirname, '/client/public'),
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   resolve: {
     extensions: ['*', '.js', '.jsx']
@@ -17,10 +22,17 @@ export default {
       {
         test: /\.(js|jsx)$/,
         include: path.join(__dirname, 'client'),
-        loader: "babel-loader",
-        options: {
-          cacheDirectory: true
-        }
+        use: [
+          {
+            loader: 'react-hot-loader'
+          },
+          {
+            loader: "babel-loader",
+            options: {
+              cacheDirectory: true
+            }
+          }
+        ]
       },
       {
         test: /\.css$/,
@@ -50,10 +62,8 @@ export default {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: path.join(__dirname, 'client/public/index.html'),
-    }),
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss: [

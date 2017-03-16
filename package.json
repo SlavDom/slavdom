@@ -36,6 +36,12 @@
     "babel-preset-latest": "^6.24.0",
     "babel-preset-react": "^6.23.0",
     "css-loader": "^0.27.3",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-loader": "^1.6.3",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
     "file-loader": "^0.10.1",
     "mongoose": "^4.9.0",
     "nodemon": "^1.11.0",
@@ -55,6 +61,17 @@
     "plugins": [
       "transform-flow-strip-types"
     ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "env": {
+      "browser": true
+    },
+    "rules": {
+      "linebreak-style": ["error", "windows"],
+      "max-len": ["error", 120],
+      "react/prefer-stateless-function": "off"
+    }
   },
   "scripts": {
     "start": "nodemon --watch server --exec babel-node -- server/src/startServer.js"

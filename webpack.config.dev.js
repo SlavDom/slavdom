@@ -10,10 +10,10 @@ export default {
   output: {
     path: path.join(__dirname, '/client/public'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/',
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx'],
   },
   devtool: 'eval-source-map',
   module: {
@@ -23,45 +23,51 @@ export default {
         include: path.join(__dirname, 'client'),
         use: [
           {
-            loader: 'react-hot-loader'
+            loader: 'react-hot-loader',
           },
           {
-            loader: "babel-loader",
+            loader: 'babel-loader',
             options: {
-              cacheDirectory: true
-            }
-          }
-        ]
+              cacheDirectory: true,
+            },
+          },
+          {
+            loader: 'eslint-loader',
+            options: {
+              cache: true,
+              failOnError: true,
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-loader',
           },
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1
-            }
+              importLoaders: 1,
+            },
           },
           {
-            loader: 'postcss-loader'
-          }
-        ]
+            loader: 'postcss-loader',
+          },
+        ],
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        use: 'url-loader?limit=10000'
+        use: 'url-loader?limit=10000',
       },
       {
         test: /\.(jpg|png|gif)$/,
-        use: 'file-loader'
-      }
+        use: 'file-loader',
+      },
     ],
   },
   plugins: [
-    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.LoaderOptionsPlugin({
       options: {
@@ -72,19 +78,19 @@ export default {
               'last 4 versions',
               'Firefox ESR',
               'not ie < 9',
-            ]
-          })
-        ]
-      }
+            ],
+          }),
+        ],
+      },
     }),
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery"
-    })
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
   ],
   node: {
     fs: 'empty',
     net: 'empty',
-    tls: 'empty'
-  }
-}
+    tls: 'empty',
+  },
+};

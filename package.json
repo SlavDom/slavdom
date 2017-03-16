@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "private": true,
   "dependencies": {
+    "axios": "^0.15.3",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.1",
     "bootstrap": "^3.3.7",
@@ -68,8 +69,14 @@
       "browser": true
     },
     "rules": {
-      "linebreak-style": ["error", "windows"],
-      "max-len": ["error", 120],
+      "linebreak-style": [
+        "error",
+        "windows"
+      ],
+      "max-len": [
+        "error",
+        120
+      ],
       "react/prefer-stateless-function": "off"
     }
   },

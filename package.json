@@ -78,6 +78,7 @@
         "error",
         120
       ],
+      "no-console": "off",
       "react/prefer-stateless-function": "off"
     }
   },

@@ -79,6 +79,7 @@
         120
       ],
       "no-console": "off",
+      "no-shadow": "off",
       "react/prefer-stateless-function": "off"
     }
   },

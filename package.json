@@ -81,6 +81,6 @@
   },
   "scripts": {
     "start": "nodemon --watch server --exec babel-node -- server/src/startServer.js",
-    "test": "mocha --require babel-polyfill --compilers js:babel-core/register  --recursive server/test/"
+    "test": "mocha --require babel-polyfill --compilers js:babel-core/register --recursive server/test/"
   }
 }

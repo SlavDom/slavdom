@@ -37,6 +37,7 @@
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
     "css-loader": "^0.28.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",

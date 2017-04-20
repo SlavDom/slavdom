@@ -1,14 +1,14 @@
-import path from 'path';
-import autoprefixer from 'autoprefixer';
-import webpack from 'webpack';
+import * as path from 'path';
+import * as autoprefixer from 'autoprefixer';
+import * as webpack from 'webpack';
 
 export default {
   entry: [
     'webpack-hot-middleware/client',
-    path.join(__dirname, '/client/src/index.jsx'),
+    path.join(__dirname, '../client/src/index.jsx'),
   ],
   output: {
-    path: path.join(__dirname, '/client/public'),
+    path: path.join(__dirname, '../client/public'),
     filename: 'bundle.js',
     publicPath: '/',
   },
@@ -20,7 +20,7 @@ export default {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        include: path.join(__dirname, 'client'),
+        include: path.join(__dirname, '../client'),
         use: [
           {
             loader: 'react-hot-loader',

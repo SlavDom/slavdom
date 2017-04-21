@@ -2,7 +2,6 @@
   "extends": "tslint:latest",
   "rules": {
     "no-suspicious-comment": false,
-    "no-console": false,
     "arrow-parens": [true, "ban-single-arg-parens"],
     "ordered-imports": false,
     "object-literal-sort-keys": false,

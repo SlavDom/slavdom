@@ -3,7 +3,12 @@
     "outDir": "./build",
     "allowJs": true,
     "target": "es5",
-//    "noImplicitAny": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noEmitOnError": true,
+    "noEmitHelpers": true,
+    "importHelpers": true,
     "types": [
       "node"
     ],

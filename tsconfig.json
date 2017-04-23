@@ -21,6 +21,7 @@
     ]
   },
   "include": [
-    "./server/src/**/*"
+    "./server/src/**/*",
+    "./server/test/**/*"
   ]
 }

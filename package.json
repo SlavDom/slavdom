@@ -119,7 +119,8 @@
   },
   "scripts": {
     "start": "node build/server/src/startServer.js | ./node_modules/.bin/bunyan",
-    "test": "jest --coverage",
+    "test": "jest",
+    "coverage": "jest --coverage",
     "compile": "tsc"
   }
 }

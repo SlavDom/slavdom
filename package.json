@@ -120,7 +120,7 @@
   },
   "scripts": {
     "start": "node build/server/src/startServer.js | ./node_modules/.bin/bunyan",
-    "test": "jest",
+    "test": "jest --verbose",
     "coverage": "jest --coverage",
     "compile": "tsc"
   }

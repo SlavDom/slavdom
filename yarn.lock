@@ -131,6 +131,10 @@
   dependencies:
     "@types/source-map" "*"
 
+"@types/validator@^6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@types/validator/-/validator-6.2.0.tgz#020322fe1929f69889eb675a1bdb5a98394b71f0"
+
 "@types/webpack-dev-middleware@^1.9.1":
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/@types/webpack-dev-middleware/-/webpack-dev-middleware-1.9.1.tgz#81e4ba42fb1e2bcd33c3ae2081b02da4604ab7ae"

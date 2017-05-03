@@ -88,9 +88,4 @@ export default {
       jQuery: 'jquery',
     }),
   ],
-  node: {
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty',
-  },
 };

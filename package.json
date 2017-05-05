@@ -123,7 +123,7 @@
     }
   },
   "scripts": {
-    "start": "node build/server/src/startServer.js | ./node_modules/.bin/bunyan",
+    "start": "tsc && node build/server/src/startServer.js | ./node_modules/.bin/bunyan",
     "test": "jest --verbose",
     "coverage": "jest --coverage",
     "compile": "tsc"

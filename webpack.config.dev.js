@@ -34,7 +34,6 @@ export default {
           {
             loader: 'eslint-loader',
             options: {
-              cache: true,
               failOnError: true,
             },
           },

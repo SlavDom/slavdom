@@ -126,7 +126,7 @@
       "react/prefer-stateless-function": "off"
     }
   },
-  "browserlist": [
+  "browserslist": [
     ">1%",
     "last 4 versions",
     "Firefox ESR",
